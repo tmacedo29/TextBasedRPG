@@ -16,7 +16,7 @@ Text Based RPG é um Jogo de RPG baseado em texto, criado com a intenção de en
 
 # TextBasedRPG
 
-Text Based RPG is a project to teach middle school students some basic mobile application development as:
+Text Based RPG is a project to teach middle school students some basic mobile application development concepts as:
 - POO
 - Algorithms
 - .NET Maui
