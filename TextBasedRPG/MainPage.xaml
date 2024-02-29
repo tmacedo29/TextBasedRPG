@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TextBasedRPG.MainPage"
+             BackgroundColor="Black"
+             Shell.NavBarIsVisible="false">
+  <Grid>
+    <Image Source="background.jpg"
+           Opacity=".6"
+           Aspect="AspectFill"/>
+    <Label Text="Uma Aventura Textual"
+           TextColor="White"
+           Margin="20"
+           FontSize="60"
+           FontFamily="Papyrus"
+           HorizontalOptions="Center"
+           HorizontalTextAlignment="Center"
+           VerticalOptions="Center"/>
+    <VerticalStackLayout
+        VerticalOptions="End"
+        Spacing="10"
+        Margin="15,0,15,40">
+
+      <Button Text="Iniciar"
+              Clicked="OnMenuStartButtonClicked"
+              HeightRequest="50"
+              CornerRadius="25"
+              BackgroundColor="#b2614d"
+              TextColor="White"
+              Margin="0,0,0,10"
+              FontSize="18"
+              FontFamily="CachetStdBold"/>
+      <Button Text="Preferências"
+              Clicked="OnMenuSettingsButtonClicked"
+              BorderColor="White"
+              BorderWidth="1"
+              HeightRequest="50"
+              CornerRadius="25"
+              BackgroundColor="#821e19"
+              TextColor="White"
+              FontSize="16"
+              FontFamily="CachetStdBold"/>
+      <Button Text="Sobre"
+              Clicked="OnMenuAboutButtonClicked"
+              BorderColor="White"
+              BorderWidth="1"
+              HeightRequest="50"
+              CornerRadius="25"
+              BackgroundColor="#821e19"
+              TextColor="White"
+              FontSize="16"
+              FontFamily="CachetStdBold"/>
+    </VerticalStackLayout>
+
+    <!--...................................................................................................
+          PREFERENCIAS
+    -->
+    <Frame x:Name="frameSettings"
+           IsVisible="false"
+           Margin="10,20"
+           CornerRadius="20"
+           BackgroundColor="#3f343a"
+           HorizontalOptions="Fill"
+           VerticalOptions="Fill">
+
+           <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="120"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Label Text="Preferências"
+              TextColor="White"
+              Margin="20"
+              FontSize="40"
+              FontFamily="Papyrus"
+              HorizontalOptions="Center"
+              HorizontalTextAlignment="Center"
+              Grid.Row="0"/>
+
+
+        <Button Text="voltar"
+                Clicked="OnDismissSettingsButtonClicked"
+                HeightRequest="50"
+                CornerRadius="25"
+                BackgroundColor="#b2614d"
+                TextColor="White"
+                Margin="0,0,0,10"
+                FontSize="18"
+                FontFamily="CachetStdBold"
+                Grid.Row="3"/>
+      </Grid>
+    </Frame>
+
+    <!--...................................................................................................
+          SOBRE
+    -->
+    <Frame x:Name="frameAbout"
+           IsVisible="false"
+           Margin="10,20"
+           CornerRadius="20"
+           BackgroundColor="#3f343a"
+           HorizontalOptions="Fill"
+           VerticalOptions="Fill">
+
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="90"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Label Text="Sobre"
+              TextColor="White"
+              Margin="20"
+              FontSize="40"
+              FontFamily="Papyrus"
+              HorizontalOptions="Center"
+              HorizontalTextAlignment="Center"
+              Grid.Row="0"/>
+
+        <Label Text="Aplicativo criado por Thiago Macedo, com intuito de ensinar Desenvolvimento de Aplicativos aos alunos do terceiro ano do ensino médio do colégio SESI - Apucarana - Paraná. A idéia foi criar um jogo no estilo 'RPG Baseado em Texto', para ensinar conceitos como Programação Orientada a Objeto, .NET MAUI, Algoritmos, UI (User Interface) e UX (User eXperince)"
+               CharacterSpacing="1"
+               LineHeight="1.5"
+               TextColor="White"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="Center"
+               FontSize="20"
+               FontFamily="CachetStdBold"
+               Grid.Row="1"/>
+
+        <Button Text="voltar"
+                Clicked="OnDismissAboutButtonClicked"
+                HeightRequest="50"
+                CornerRadius="25"
+                BackgroundColor="#b2614d"
+                TextColor="White"
+                Margin="0,0,0,10"
+                FontSize="18"
+                FontFamily="CachetStdBold"
+                Grid.Row="2"/>
+      </Grid>
+    </Frame>
+  </Grid>
+</ContentPage>
